@@ -1,15 +1,37 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {render} from 'react-dom'
 
-import Component from '../../src'
+import EmailInput from '../../src'
 
-let Demo = React.createClass({
-  render() {
-    return <div>
-      <h1>email-input Demo</h1>
-      <Component/>
-    </div>
+class Demo extends Component {
+
+  constructor(props) {
+      super(props)
+      this.state = {
+        value:''
+      }
+
   }
-})
+  onChange = (field) => {
+    return (value) => {
+      this.setState((prevState, props) => ({
+        [field]: value
+      }))
+    }
+  }
+
+  render() {
+    return (
+    <div>
+      <EmailInput
+        label="Email address"
+        id="email-address"
+        value={this.state.value}
+        onChange={this.onChange('value')}
+      />
+    </div>
+    )
+  }
+}
 
 render(<Demo/>, document.querySelector('#demo'))

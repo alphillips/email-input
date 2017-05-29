@@ -1,16 +1,50 @@
 # email-input
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+React email input component
 
-Describe email-input here.
+## Usage
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+### Install
+```
+npm i @react-ag-components/email-input --save
+```
+### Use in your project
+```
+import Input from '@react-ag-components/email-input'
+```
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+```
+<EmailInput
+  label="Email address"
+  id="email-address"
+  value={this.state.value}
+  onChange={this.onChange('value')}
+/>
+```
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+### Properties
+
+
+## Contributing
+
+Get the repository
+```
+git clone https://github.com/alphillips/email-input.git
+```
+
+Update dependencies
+```
+npm install
+```
+
+Run the project
+```
+npm start
+```
+
+### Deploy to npm
+#### Build
+`npm run build -- --copy-files`
+
+#### Publish
+`npm publish --access public`
