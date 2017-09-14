@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 import EmailInput from '../../src'
 
 class Demo extends Component {
@@ -22,14 +24,16 @@ class Demo extends Component {
 
   render() {
     return (
-    <div>
-      <EmailInput
-        label="Email address"
-        id="email-address"
-        value={this.state.value}
-        onChange={this.onChange('value')}
-      />
-    </div>
+      <MuiThemeProvider>
+        <div>
+          <EmailInput
+            label="Email address"
+            id="email-address"
+            value={this.state.value}
+            onChange={this.onChange('value')}
+          />
+        </div>
+    </MuiThemeProvider>
     )
   }
 }

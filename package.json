@@ -1,6 +1,6 @@
 {
   "name": "@react-ag-components/email-input",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "email-input React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -19,7 +19,8 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "@react-ag-components/input": "0.0.3"
+    "material-ui": "0.19.0",
+    "@react-ag-components/input": "^0.1.0"
   },
   "peerDependencies": {
     "react": "15.x"
@@ -33,8 +34,8 @@
   "homepage": "",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/alphillips/email-input.git"
+    "type": "git",
+    "url": "https://github.com/alphillips/email-input.git"
   },
   "keywords": [
     "react-component"
